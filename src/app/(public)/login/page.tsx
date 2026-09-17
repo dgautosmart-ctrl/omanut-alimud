@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import type { Metadata } from "next";
 import { LoginForm } from "./LoginForm";
 
@@ -18,7 +19,9 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <LoginForm />
+        <Suspense>
+          <LoginForm />
+        </Suspense>
 
         <p className="text-center mt-6 text-sm text-[var(--color-muted)]">
           עדיין אין לך חשבון?{" "}
